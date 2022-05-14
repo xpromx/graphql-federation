@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon -e ts,graphql --exec ts-node src/index.ts",
+    "generate": "graphql-codegen",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.11",
+    "@graphql-codegen/typescript-resolvers": "^2.6.4",
     "apollo-server": "^3.7.0",
     "graphql": "^16.5.0"
   },
