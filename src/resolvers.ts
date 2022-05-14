@@ -1,17 +1,16 @@
-import { locations, tours } from "./dataset";
+import { helloQuery } from "./queries/hello.query";
+import { locationsQuery } from "./queries/locations.query";
+import { toursQuery } from "./queries/tours.query";
 import { Resolvers } from "./types";
+import { locationType } from "./types/location.type";
 
 const resolvers: Resolvers = {
   Query: {
-    hello: () => "Hello!",
-    locations: () => locations,
-    tours: () => tours,
+    hello: helloQuery,
+    locations: locationsQuery,
+    tours: toursQuery,
   },
-  Location: {
-    tours: (root) => {
-      return tours.filter((tour) => tour.locationId === root.id);
-    },
-  },
+  Location: locationType,
 };
 
 export default resolvers;
