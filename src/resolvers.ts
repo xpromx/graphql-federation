@@ -1,14 +1,17 @@
 import { locations, tours } from "./dataset";
+import { Resolvers } from "./types";
 
-export default {
+const resolvers: Resolvers = {
   Query: {
     hello: () => "Hello!",
     locations: () => locations,
     tours: () => tours,
   },
   Location: {
-    tours: (root: { id: string }) => {
+    tours: (root) => {
       return tours.filter((tour) => tour.locationId === root.id);
     },
   },
 };
+
+export default resolvers;
