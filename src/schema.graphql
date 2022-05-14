@@ -1,0 +1,17 @@
+type Query {
+  hello: String!
+  locations: [Location!]
+  tours: [Tour!]
+}
+
+type Location {
+  id: ID!
+  name: String!
+  tours: [Tour!]
+}
+
+type Tour {
+  id: Int!
+  title: String!
+  category: String
+}
