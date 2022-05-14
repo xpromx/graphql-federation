@@ -7,8 +7,8 @@
     "dev": "NODE_ENV=development nodemon -e ts,graphql --exec ts-node src/index.ts",
     "generate": "graphql-codegen",
     "test:env": "dotenv -e .env.test",
-    "test:migrate": "yarn test:env -- npx prisma migrate dev yarn prisma migrate deploy",
-    "test:jest": "yarn test:env -- dotenv -e .env.test jest -i",
+    "test:migrate": "yarn test:env npx prisma migrate dev yarn prisma migrate deploy",
+    "test:jest": "yarn test:env dotenv -e .env.test jest -i",
     "test": "yarn test:migrate && yarn test:jest"
   },
   "author": "",

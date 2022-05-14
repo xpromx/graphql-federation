@@ -4,8 +4,8 @@ export interface Context {
   prisma: PrismaClient;
 }
 
-const prisma = new PrismaClient({
-  log: ["query"],
+export const prisma = new PrismaClient({
+  log: process.env.NODE_ENV === "test" ? [] : ["query"],
 });
 
 export const context: Context = {
