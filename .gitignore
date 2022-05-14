@@ -1,3 +1,11 @@
-node_modules
+## Build
 build
 dist
+
+# docker
+docker/logs/*
+!docker/logs/.gitkeep
+
+## NPM
+package-lock.json
+node_modules
