@@ -1,11 +1,9 @@
-import { config } from "dotenv";
+import "dotenv/config";
 import { ApolloServer } from "apollo-server";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { resolvers } from "./resolvers";
 import { context } from "./context";
-
-config();
 
 const typeDefs = readFileSync(join(__dirname, "./schema.graphql"), "utf8");
 
