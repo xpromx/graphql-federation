@@ -13,23 +13,22 @@ export type Scalars = {
   Float: number;
 };
 
-export type Location = {
-  __typename?: 'Location';
-  id: Scalars['ID'];
+export type Destination = {
+  __typename?: 'Destination';
+  id: Scalars['Int'];
   name: Scalars['String'];
   tours?: Maybe<Array<Tour>>;
 };
 
 export type Query = {
   __typename?: 'Query';
+  destinations?: Maybe<Array<Destination>>;
   hello: Scalars['String'];
-  locations?: Maybe<Array<Location>>;
   tours?: Maybe<Array<Tour>>;
 };
 
 export type Tour = {
   __typename?: 'Tour';
-  category?: Maybe<Scalars['String']>;
   id: Scalars['Int'];
   title: Scalars['String'];
 };
@@ -105,9 +104,8 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = ResolversObject<{
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
-  ID: ResolverTypeWrapper<Scalars['ID']>;
+  Destination: ResolverTypeWrapper<Destination>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
-  Location: ResolverTypeWrapper<Location>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']>;
   Tour: ResolverTypeWrapper<Tour>;
@@ -116,36 +114,34 @@ export type ResolversTypes = ResolversObject<{
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = ResolversObject<{
   Boolean: Scalars['Boolean'];
-  ID: Scalars['ID'];
+  Destination: Destination;
   Int: Scalars['Int'];
-  Location: Location;
   Query: {};
   String: Scalars['String'];
   Tour: Tour;
 }>;
 
-export type LocationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Location'] = ResolversParentTypes['Location']> = ResolversObject<{
-  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+export type DestinationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Destination'] = ResolversParentTypes['Destination']> = ResolversObject<{
+  id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   tours?: Resolver<Maybe<Array<ResolversTypes['Tour']>>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
+  destinations?: Resolver<Maybe<Array<ResolversTypes['Destination']>>, ParentType, ContextType>;
   hello?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  locations?: Resolver<Maybe<Array<ResolversTypes['Location']>>, ParentType, ContextType>;
   tours?: Resolver<Maybe<Array<ResolversTypes['Tour']>>, ParentType, ContextType>;
 }>;
 
 export type TourResolvers<ContextType = any, ParentType extends ResolversParentTypes['Tour'] = ResolversParentTypes['Tour']> = ResolversObject<{
-  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   title?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type Resolvers<ContextType = any> = ResolversObject<{
-  Location?: LocationResolvers<ContextType>;
+  Destination?: DestinationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
   Tour?: TourResolvers<ContextType>;
 }>;
