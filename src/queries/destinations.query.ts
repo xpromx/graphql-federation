@@ -1,10 +1,10 @@
 import { Context } from "../context";
 import { QueryResolvers } from "../types";
 
-export const toursQuery: QueryResolvers["tours"] = (
+export const destinationsQuery: QueryResolvers["destinations"] = async (
   _,
   _args,
   { prisma }: Context
 ) => {
-  return prisma.tour.findMany();
+  return prisma.destination.findMany();
 };
