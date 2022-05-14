@@ -1,11 +1,12 @@
 ## ToDo
 
 - [x] Prisma DB
-- [ ] add jest test
+- [x] Jest Setup
+- [ ] Github Actions CI/CD
 - [ ] Monorepo setup (turborepo)
-- [ ] create 2 graphs (tours, users)
-- [ ] add apollo-federation
-- [ ] ...
+- [ ] Create 2 graphs (tours, users)
+- [ ] Apollo Federation Setup
+- [ ] Improve Test
 
 ## Commands
 
