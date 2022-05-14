@@ -1,16 +1,14 @@
 import { helloQuery } from "./queries/hello.query";
-import { locationsQuery } from "./queries/locations.query";
+import { destinationsQuery } from "./queries/destinations.query";
 import { toursQuery } from "./queries/tours.query";
 import { Resolvers } from "./types";
-import { locationType } from "./types/location.type";
+import { destinationType } from "./types/destination.type";
 
-const resolvers: Resolvers = {
+export const resolvers: Resolvers = {
   Query: {
     hello: helloQuery,
-    locations: locationsQuery,
+    destinations: destinationsQuery,
     tours: toursQuery,
   },
-  Location: locationType,
+  Destination: destinationType,
 };
-
-export default resolvers;

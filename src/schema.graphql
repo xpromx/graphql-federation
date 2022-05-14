@@ -1,11 +1,11 @@
 type Query {
   hello: String!
-  locations: [Location!]
+  destinations: [Destination!]
   tours: [Tour!]
 }
 
-type Location {
-  id: ID!
+type Destination {
+  id: Int!
   name: String!
   tours: [Tour!]
 }
@@ -13,5 +13,4 @@ type Location {
 type Tour {
   id: Int!
   title: String!
-  category: String
 }
