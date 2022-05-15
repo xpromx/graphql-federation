@@ -1,5 +1,5 @@
 {
-  "name": "@app/subgraph-tours",
+  "name": "@app/subgraph-users",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
