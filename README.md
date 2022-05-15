@@ -7,6 +7,9 @@
 - [ ] Create 2 graphs (tours, users)
 - [ ] Apollo Federation Setup
 - [ ] Improve Test
+- [ ] Authentication
+- [ ] Authorization
+- [ ] Monitoring
 
 ## Commands
 
