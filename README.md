@@ -2,7 +2,7 @@
 
 - [x] Prisma DB
 - [x] Jest Setup
-- [ ] Monorepo setup (turborepo)
+- [x] Monorepo setup (turborepo)
 - [ ] Husky
 - [ ] Github Actions CI/CD
 - [ ] Create 2 graphs (tours, users)
