@@ -1,0 +1,13 @@
+{
+  "name": "@app/shared",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "tsconfig/base.json",
+    "tsconfig/node14.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
