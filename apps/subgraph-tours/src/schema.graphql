@@ -1,16 +1,20 @@
+extend schema
+    @link(url: "https://specs.apollo.dev/federation/v2.0",
+          import: ["@key"])
+
 type Query {
   hello: String!
   destinations: [Destination!]
   tours: [Tour!]
 }
 
-type Destination {
+type Destination  @key(fields: "id") {
   id: Int!
   name: String!
   tours: [Tour!]
 }
 
-type Tour {
+type Tour  @key(fields: "id") {
   id: Int!
   title: String!
 }

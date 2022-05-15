@@ -1,11 +1,11 @@
 {
-  "name": "@app/subgraph-tours",
+  "name": "@app/gateway",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon -e ts,graphql --exec ts-node src/index.ts",
-    "generate": "graphql-codegen",
+    "test:env": "dotenv -e .env.test",
     "test:migrate": "cd ../database yarn migrate:test",
     "test:jest": "dotenv -e ../../.env.test jest -i",
     "test": "yarn test:migrate && yarn test:jest"
@@ -13,11 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@apollo/subgraph": "^2.0.2",
+    "@apollo/gateway": "^2.0.2",
     "@app/database": "*",
-    "@graphql-codegen/cli": "^2.6.2",
-    "@graphql-codegen/typescript": "^2.4.11",
-    "@graphql-codegen/typescript-resolvers": "^2.6.4",
     "apollo-server": "^3.7.0",
     "dotenv": "^16.0.1",
     "graphql": "^16.5.0"
