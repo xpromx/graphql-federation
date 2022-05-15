@@ -6,7 +6,7 @@
 - [ ] Husky
 - [ ] Github Actions CI/CD
 - [ ] Create 2 graphs (tours, users)
-- [ ] Apollo Federation Setup
+- [x] Apollo Federation Setup
 - [ ] Improve Test
 - [ ] Authentication
 - [ ] Authorization
