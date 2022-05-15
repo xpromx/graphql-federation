@@ -1,3 +1,3 @@
 {
-  "extends": "@app/shared/tsconfig/node14.json"
+  "extends": "@app/core/tsconfig/node14.json"
 }
