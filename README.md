@@ -5,7 +5,7 @@
 - [x] Monorepo setup (turborepo)
 - [ ] Husky
 - [ ] Github Actions CI/CD
-- [ ] Create 2 graphs (tours, users)
+- [x] Create 2 graphs (tours, users)
 - [x] Apollo Federation Setup
 - [ ] Improve Test
 - [ ] Authentication
