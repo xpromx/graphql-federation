@@ -6,11 +6,14 @@
     "apps/*"
   ],
   "scripts": {
+    "start": "turbo run start",
     "build": "turbo run build",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules",
+    "docker:test": "docker-compose -f docker-compose.test.yml --env-file ./.env.docker.test",
+    "docker:dev": "docker-compose up"
   },
   "devDependencies": {
     "turbo": "^1.2.9"

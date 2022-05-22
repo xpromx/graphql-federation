@@ -1,3 +1,8 @@
 {
-  "extends": "@app/core/tsconfig/node14.json"
+  "extends": "@app/core/tsconfig/node14.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"]
 }
